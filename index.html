@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Blackveriun</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Iniciar Sesion</h3>
+    <input type="email" placeholder="Correo" id="email_field" />
+    <input type="password" placeholder="Clave" id="password_field" />
+
+    <button onclick="login()">Acceder</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div main-div">
+    <center><b><p id="user_para"></p></b></center>
+    <button class="bt2" onclick="logout()">Desconectar</button>
+    <center><h3>Nueva Cuenta</h3></center>
+    <input type="email" placeholder="Correo" id="email" />
+    <input type="password" placeholder="Clave" id="clave" /><br><br>
+    <button class="bt" onclick="registrar()">Crear Cuenta</button>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyA2fN7TAOJT0p9YSqfJywKthDZfgUeyRYU",
+      authDomain: "blackveriun-reborn.firebaseapp.com",
+      databaseURL: "https://blackveriun-reborn.firebaseio.com",
+      projectId: "blackveriun-reborn",
+      storageBucket: "blackveriun-reborn.appspot.com",
+      messagingSenderId: "301701306998"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script src="index.js"></script>
+  <script src="logic.js"></script>
+
+</body>
+</html>
